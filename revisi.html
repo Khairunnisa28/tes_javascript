@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funFactorial(x) {
+            var sumFactorial = 1;
+            for (var i = 1; i <= x; i++) {
+                sumFactorial *= i;
+            }
+            return sumFactorial;
+        }
+
+        var firstNum = prompt('Input first number: ');
+        var secondNum = prompt('Input second number: ');
+
+        // Check if input is empty or not a number
+        if (firstNum === '' || isNaN(firstNum) || secondNum === '' || isNaN(secondNum)) {
+            alert('Please enter valid numbers.');
+        } else {
+            var sum = funFactorial(parseInt(firstNum)) + funFactorial(parseInt(secondNum));
+            alert('The sum of ' + firstNum + '! and ' + secondNum + '! is: ' + sum);
+        }
+    </script>
+</body>
+</html>
